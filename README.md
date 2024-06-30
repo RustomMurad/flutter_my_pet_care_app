@@ -1,3 +1,3 @@
-# my_pets_care_app
+# My Pets Care Application 
 
-A new Flutter project.
+This is flutter/dart final project.
