@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_pets_care_app/pages/my_pets.dart';
 import 'package:my_pets_care_app/widgets/card.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => MyPetsCarePage(title: 'My Pet\'s Care'),
+        "/MyPetsPage": (context) => MyPetsPage(title: 'My Pets'),
       },
       // home: const MyPetsCarePage(title: 'My Pet\'s Care'),
     );
@@ -81,7 +83,7 @@ class _MyPetsCarePageState extends State<MyPetsCarePage> {
                 width: 150,
                 height: 150,
                 child:
-                    card(context, "my_pets", "svg", "My Pets", "/"),
+                    card(context, "my_pets", "svg", "My Pets", "/MyPetsPage"),
               ),
             ],
           ),
