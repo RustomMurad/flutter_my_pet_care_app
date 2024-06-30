@@ -1,1 +1,1 @@
-# flutter_pet_care
+# My Pet Care Application (Flutter edition)
