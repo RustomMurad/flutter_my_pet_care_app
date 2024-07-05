@@ -37,9 +37,9 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Add/Update My Pet!',
+                      'My New Pet!',
                       style: TextStyle(
-                        fontSize: 40,
+                        fontSize: 45,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 197, 129, 6),
                       ),
@@ -66,8 +66,14 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                               bottom: 10.0,
                             ),
                             labelText: "Name",
-                            hintText: "what do people call you",
-                            border: OutlineInputBorder(),
+                            labelStyle: TextStyle(
+                              color: Color.fromARGB(255, 197, 129, 6),
+                              fontWeight: FontWeight.bold,
+                            ),
+                            hintText: "what should I call you",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                             //icon: Icon(Icons.person),
                           ),
                         ),
@@ -82,9 +88,14 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                               bottom: 10.0,
                             ),
                             labelText: "Breed",
+                            labelStyle: TextStyle(
+                              color: Color.fromARGB(255, 197, 129, 6),
+                              fontWeight: FontWeight.bold,
+                            ),
                             hintText: "what do people call you",
-                            border: OutlineInputBorder(),
-                            //icon: Icon(Icons.person),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -98,8 +109,14 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                               bottom: 10.0,
                             ),
                             labelText: "Birthday",
+                            labelStyle: TextStyle(
+                              color: Color.fromARGB(255, 197, 129, 6),
+                              fontWeight: FontWeight.bold,
+                            ),
                             hintText: "what do people call you",
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                             //icon: Icon(Icons.person),
                           ),
                         ),
@@ -114,8 +131,14 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                               bottom: 10.0,
                             ),
                             labelText: "Gender",
+                            labelStyle: TextStyle(
+                              color: Color.fromARGB(255, 197, 129, 6),
+                              fontWeight: FontWeight.bold,
+                            ),
                             hintText: "what do people call you",
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                             //icon: Icon(Icons.person),
                           ),
                         ),
@@ -134,21 +157,32 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                               color: Color.fromARGB(255, 197, 129, 6),
                               fontWeight: FontWeight.bold,
                             ),
-                            hintText: "what do people call you",
+                            hintText: "how much do you weight?",
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            //icon: Icon(Icons.person),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 20,
                         ),
                         ElevatedButton(
-                          style: ElevatedButton.styleFrom(minimumSize: Size(200, 50)),                          
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(200, 50),
+                            backgroundColor:  Color.fromARGB(255, 197, 129, 6),
+                          ),
                           onPressed: () {
                             Navigator.pushNamed(context, "/MyPetPage");
                           },
-                          child: Text("Done"),
+                          child: Text(
+                            "Welcome!",
+                            style: TextStyle(
+                              //color: Color.fromARGB(255, 197, 129, 6),
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         )
                       ],
                     ),
