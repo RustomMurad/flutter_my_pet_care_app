@@ -3,16 +3,16 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_pets_care_app/widgets/card.dart';
 import 'package:my_pets_care_app/widgets/small_card.dart';
 
-class MyPetPage extends StatefulWidget {
-  const MyPetPage({super.key, required this.title});
+class BrunoDogPage extends StatefulWidget {
+  const BrunoDogPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyPetPage> createState() => _MyPetPageState();
+  State<BrunoDogPage> createState() => _BrunoDogPageState();
 }
 
-class _MyPetPageState extends State<MyPetPage> {
+class _BrunoDogPageState extends State<BrunoDogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +38,7 @@ class _MyPetPageState extends State<MyPetPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'My Bunny',
+                      'My Bruno',
                       style: TextStyle(
                         fontSize: 45,
                         fontWeight: FontWeight.bold,
@@ -50,16 +50,17 @@ class _MyPetPageState extends State<MyPetPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    card(context, "bunny_pic1", "png", "06/26/24", "/"),
+                    card(
+                        context, "gb-bulldog-1", "png", "06/26/23", "/"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    small_card(context, "my_pets", "svg", "Snowball", "/"),
-                    small_card(context, "dob", "svg", "03/03/20", "/"),
-                    small_card(context, "gender", "svg", "Female", "/"),
-                    small_card(context, "scales", "svg", "12.3lb", "/"),
+                    small_card(context, "my_pets", "svg", "Bruno", "/"),
+                    small_card(context, "dob", "svg", "06/10/21", "/"),
+                    small_card(context, "gender", "svg", "Male", "/"),
+                    small_card(context, "scales", "svg", "35.8lb", "/"),
                   ],
                 ),
               ],
