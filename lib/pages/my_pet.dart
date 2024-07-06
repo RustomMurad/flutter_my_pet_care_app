@@ -62,17 +62,6 @@ class _MyPetPageState extends State<MyPetPage> {
                     small_card(context, "scales", "svg", "12.3lb", "/"),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Upcoming Appoinment(s)',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 197, 129, 6),
-                        )),
-                  ],
-                ),
               ],
             ),
           ),

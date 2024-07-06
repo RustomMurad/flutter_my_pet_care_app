@@ -1,17 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_pets_care_app/widgets/card.dart';
+import 'package:my_pets_care_app/models/pet.dart';
+import 'package:my_pets_care_app/widgets/small_card.dart';
 
 class MyPetsPage extends StatefulWidget {
-  const MyPetsPage({super.key, required this.title});
-
-  final String title;
+  const MyPetsPage({
+    super.key,
+  });
 
   @override
   State<MyPetsPage> createState() => _MyPetsPageState();
 }
 
 class _MyPetsPageState extends State<MyPetsPage> {
+  final List<Pet> _registeredPets = [
+    Pet(
+      avatar: 'avatar-smokey',
+      image: 'british-shorthair-1',
+      image_type: 'png',
+      kind: Kind.cat,
+      name: 'Smokey',
+      breed: 'Shortheir',
+      dob: DateTime.now(),
+      sex: Gender.she,
+      weight: 13.5,
+      route: '/MyPetPage',
+    ),
+    Pet(
+      avatar: 'avatar-smokey',
+      image: 'british-shorthair-1',
+      image_type: 'png',
+      kind: Kind.dog,
+      name: 'Smokey',
+      breed: 'Shortheir',
+      dob: DateTime.now(),
+      sex: Gender.she,
+      weight: 13.5,
+      route: '/MyPetPage',
+    ),
+    Pet(
+      avatar: 'avatar-smokey',
+      image: 'british-shorthair-1',
+      image_type: 'png',
+      kind: Kind.bird,
+      name: 'Smokey',
+      breed: 'Shortheir',
+      dob: DateTime.now(),
+      sex: Gender.she,
+      weight: 13.5,
+      route: '/MyPetPage',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,16 +92,35 @@ class _MyPetsPageState extends State<MyPetsPage> {
               ],
             ),
           ),
-          SliverGrid.count(
-            crossAxisCount: 2,
-            children: <Widget>[
-              card(context, "skyler", "png", "Skayler", "/"),
-              card(context, "bunny", "png", "Bunny", "/MyPetPage"),
-              card(context, "joy", "png", "Joy", "/"),
-              card(context, "add_pet", "svg", "Add Pet", "/AddUpdateMyPetPage"),
-            ],
+          SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1.4,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+            ),
+            delegate: SliverChildBuilderDelegate(
+              childCount: _registeredPets.length,
+              (context, index) => small_card(
+                  context,
+                  _registeredPets[index].avatar,
+                  _registeredPets[index].image_type,
+                  _registeredPets[index].name,
+                  _registeredPets[index].route),
+            ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/AddUpdateMyPetPage');
+        },
+        tooltip: 'Add New Pet',
+        child: Icon(
+          Icons.add,
+          size: 60,
+          color: Color.fromARGB(255, 197, 129, 6),
+        ),
       ),
     );
   }
