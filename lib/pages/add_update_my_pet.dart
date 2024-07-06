@@ -52,8 +52,16 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                     card(context, "bunny_pic1", "png", "06/26/24", "/"),
                   ],
                 ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SvgPicture.asset('assets/images/dog.svg'),
+                    SvgPicture.asset('assets/images/cat.svg'),
+                    SvgPicture.asset('assets/images/bird.svg'),
+                  ],
+                ),
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Form(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -78,7 +86,7 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 15.0,
+                          height: 10.0,
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -99,7 +107,7 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 15.0,
+                          height: 10.0,
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -169,7 +177,7 @@ class _AddUpdateMyPetPageState extends State<AddUpdateMyPetPage> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(200, 50),
-                            backgroundColor:  Color.fromARGB(255, 197, 129, 6),
+                            backgroundColor: Color.fromARGB(255, 197, 129, 6),
                           ),
                           onPressed: () {
                             Navigator.pushNamed(context, "/MyPetPage");
