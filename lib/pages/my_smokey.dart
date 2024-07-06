@@ -57,7 +57,7 @@ class _SmokeyCatPageState extends State<SmokeyCatPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    small_card(context, "my_pets", "svg", "Smokey", "/"),
+                    small_card(context, "cat", "svg", "Snowball", "/"),
                     small_card(context, "dob", "svg", "03/03/20", "/"),
                     small_card(context, "gender", "svg", "Female", "/"),
                     small_card(context, "scales", "svg", "12.3lb", "/"),

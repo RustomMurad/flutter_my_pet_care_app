@@ -3,16 +3,16 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_pets_care_app/widgets/card.dart';
 import 'package:my_pets_care_app/widgets/small_card.dart';
 
-class BrunoDogPage extends StatefulWidget {
-  const BrunoDogPage({super.key, required this.title});
+class RicoBirdPage extends StatefulWidget {
+  const RicoBirdPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BrunoDogPage> createState() => _BrunoDogPageState();
+  State<RicoBirdPage> createState() => _RicoBirdPageState();
 }
 
-class _BrunoDogPageState extends State<BrunoDogPage> {
+class _RicoBirdPageState extends State<RicoBirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,16 +51,16 @@ class _BrunoDogPageState extends State<BrunoDogPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     card(
-                        context, "gb-bulldog-1", "png", "06/26/23", "/"),
+                        context, "parrot-macaw", "png", "09/01/15", "/"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    small_card(context, "dog", "svg", "Bulldog", "/"),
-                    small_card(context, "dob", "svg", "06/10/21", "/"),
+                    small_card(context, "bird", "svg", "Macaw", "/"),
+                    small_card(context, "dob", "svg", "06/10/11", "/"),
                     small_card(context, "gender", "svg", "Male", "/"),
-                    small_card(context, "scales", "svg", "35.8lb", "/"),
+                    small_card(context, "scales", "svg", "4.5", "/"),
                   ],
                 ),
               ],

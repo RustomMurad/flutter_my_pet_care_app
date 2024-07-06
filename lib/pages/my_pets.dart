@@ -39,16 +39,16 @@ class _MyPetsPageState extends State<MyPetsPage> {
       route: '/BrunoDogPage',
     ),
     Pet(
-      avatar: 'avatar-smokey',
-      image: 'british-shorthair-1',
+      avatar: 'avatar-rico',
+      image: 'parrot-macaw',
       image_type: 'png',
       kind: Kind.bird,
-      name: 'Smokey',
-      breed: 'Shortheir',
+      name: 'Rico',
+      breed: 'Macaw',
       dob: DateTime.now(),
-      sex: Gender.she,
+      sex: Gender.he,
       weight: 13.5,
-      route: '/',
+      route: '/RicoBirdPage',
     ),
   ];
 

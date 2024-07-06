@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_pets_care_app/pages/add_update_my_pet.dart';
 import 'package:my_pets_care_app/pages/my_bruno.dart';
+import 'package:my_pets_care_app/pages/my_rico.dart';
 import 'package:my_pets_care_app/pages/my_smokey.dart';
 import 'package:my_pets_care_app/pages/my_pets.dart';
 import 'package:my_pets_care_app/widgets/card.dart';
@@ -26,8 +27,9 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => MyPetsCarePage(title: 'My Pet\'s Care'),
         "/MyPetsPage": (context) => MyPetsPage(), //(title: 'My Pets'),
-        "/SmokeyCatPage": (context) => SmokeyCatPage(title: 'Bonny'),
+        "/SmokeyCatPage": (context) => SmokeyCatPage(title: 'Smokey'),
         "/BrunoDogPage" : (context) => BrunoDogPage(title: 'Bruno',),
+        "/RicoBirdPage": (context) => RicoBirdPage(title: 'Rico',),
         "/AddUpdateMyPetPage": (context) =>
             AddUpdateMyPetPage(title: 'Add/Update My Pet'),
       },
