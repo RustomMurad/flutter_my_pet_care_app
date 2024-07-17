@@ -74,6 +74,7 @@ class _MyPetsState extends State<MyPets> {
         title: Text(
           'My Pets',
           style: TextStyle(
+            fontSize: 35,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 197, 129, 6),
           ),
@@ -83,7 +84,7 @@ class _MyPetsState extends State<MyPets> {
             onPressed: _openAddExpenseOverlay,
             icon: Icon(
               Icons.add,
-              size: 40,
+              size: 45,
               color: Color.fromARGB(255, 197, 129, 6),
             ),
           ),
