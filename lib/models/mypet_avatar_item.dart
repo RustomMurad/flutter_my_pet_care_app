@@ -19,42 +19,28 @@ class MypetAvatarItem extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 40,
+            vertical: 10,
           ),
           child: Column(
             children: [
               CircleAvatar(
-                radius: 55,
+                radius: 45,
                 backgroundImage: AssetImage(mypet.image),
               ),
-              // Container(
-              //   width: 100,
-              //   height: 100,
-              //   decoration: BoxDecoration(
-              //     shape: BoxShape.circle,
-              //     // image: DecorationImage(
-              //     //   image: AssetImage(mypet.image),
-              //     // ),
-              //   ),
-              //   child: Image.asset(
-              //     mypet.image,
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
               SizedBox(
-                height: 8,
+                height: 6,
               ),
               Text(
                 mypet.name.toUpperCase(),
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Color.fromARGB(255, 197, 129, 6),
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
-                height: 8,
-              ),
+              // SizedBox(
+              //   height: 6,
+             //),
               // Row(
               //   children: [
               //     Column(
