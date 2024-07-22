@@ -67,8 +67,41 @@ class _MyPetsState extends State<MyPets> {
     });
   }
 
+  void _removePet(MyPet mypet) {
+    final petIndex = _regesteredMyPets.indexOf(mypet);
+    setState(() {
+      _regesteredMyPets.remove(mypet);
+    });
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: Duration(seconds: 3),
+        content: Text('Pet deleted.'),
+        action: SnackBarAction(
+          label: 'Undo',
+          onPressed: () {
+            setState(() {
+              _regesteredMyPets.insert(petIndex, mypet);
+            });
+          },
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    Widget mainContent = Center(
+      child: Text('No pets founf. Start adding some!'),
+    );
+
+    if (_regesteredMyPets.isNotEmpty) {
+      mainContent = MyPetsList(
+        mypets: _regesteredMyPets,
+        onRemoveExpense: _removePet,
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -93,7 +126,7 @@ class _MyPetsState extends State<MyPets> {
       body: Column(
         children: [
           Expanded(
-            child: MyPetsList(mypets: _regesteredMyPets),
+            child: mainContent,
           ),
         ],
       ),

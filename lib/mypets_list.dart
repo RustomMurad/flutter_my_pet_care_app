@@ -7,9 +7,11 @@ class MyPetsList extends StatelessWidget {
   const MyPetsList({
     super.key,
     required this.mypets,
+    required this.onRemoveExpense,
   });
 
   final List<MyPet> mypets;
+  final void Function(MyPet mypet) onRemoveExpense;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,9 @@ class MyPetsList extends StatelessWidget {
       itemCount: mypets.length,
       itemBuilder: (ctx, index) => Dismissible(
         key: ValueKey(mypets[index]),
+        onDismissed: (direction) {
+          onRemoveExpense(mypets[index]);
+        },
         child: MypetAvatarItem(
           mypets[index],
         ),
